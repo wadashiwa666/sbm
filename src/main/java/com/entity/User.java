@@ -1,7 +1,8 @@
 package com.entity;
 
-public class User {
+import java.util.Date;
 
+public class User {
     private Integer id;
 
     private String userName;
@@ -9,6 +10,8 @@ public class User {
     private String password;
 
     private Integer age;
+
+    private Date createDate;
 
     public Integer getId() {
         return id;
@@ -42,8 +45,11 @@ public class User {
         this.age = age;
     }
 
-    @Override
-    public String toString() {
-        return "User [id=" + id + ", userName=" + userName + ", password=" + password + ", age=" + age + "]";
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 }
